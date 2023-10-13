@@ -4,4 +4,5 @@
 ## BANCO LOGICO
 ![banco de dados logico](https://github.com/joicecarol/projeto02AgenciaViagens/blob/main/agenciaViagensBancodeDados/modelologicoatualizado.jpg)
 ## MODELO UML
-![modelo UML]()
+![modelo uml](https://github.com/joicecarol/projeto02AgenciaViagens/blob/main/agenciaViagensBancodeDados/diagramauml.jpeg)
+##
