@@ -15,21 +15,22 @@ main {
     
 }
 nav {
-    height: 7%;
-    padding: 30px; ;
+    padding: 10px; 
     background-color:#5271FF ;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    font-size: larger;
+    justify-content: space-between;
+    font-size: medium;
     
 }
 nav ul {
 
-    display: flex;
+    
     width: 100%;
     justify-content: flex-end;
-    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
 
 
 }
@@ -37,8 +38,9 @@ nav ul {
 
 li {
     list-style: none;
-    padding: 15px;
+    padding: 0 10px;
     font-family: 'Times New Roman', Times, serif;
+    
 
     
 }
@@ -48,18 +50,43 @@ a {
     color: rgb(255, 238, 238);
     
 }
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;}
+
+        li {
+            padding: 5px 0;
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 .conteiner1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     padding: 10px;
-    gap: 10px;
     margin: 10px;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    
+    flex-wrap: wrap;
 
 }
 
@@ -74,20 +101,48 @@ a {
 
 }
 
+.celula footer {
+
+    padding: 10px;
+    margin: 40px;
+}
 
 .celula {
 
     text-align: center;
-height: 200px;
+    padding: 20px;
+    margin: 10px;
+width: 100%;
+max-width:100%;
 border-radius: 10px;
-height: max-content;
+box-sizing: border-box;
+}
+.celula img {
+
+    max-width: 30%;
+    height: auto;
 }
 .celula2 {
 
     text-align: center;
-height: 200px;
 border-radius: 10px;
-height: max-content;
+width: calc(25% - 20px);
+margin: 10px;
+padding: 10px;
+box-shadow: 0 4px 6px rgba(0,0,0,1);
+
+
+}
+.celula2 img {
+
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .celula2 {
+        width: calc(50% - 20px);
+    }
 }
 
 #footer {  
@@ -127,12 +182,12 @@ background-color: #5271FF;
 }
 
 .conteiner {
-    display: grid;
+    display: flex;
     grid-template-rows: 1fr;
     gap: 10px;
     margin-top: 10px;
     padding: 20px;
-    justify-content: center;
+    
     background-color: #5271FF;
 }
 
