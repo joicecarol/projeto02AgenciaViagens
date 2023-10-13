@@ -1,0 +1,5 @@
+package principal.principalDAO;
+
+public class HotelDAO {
+
+}

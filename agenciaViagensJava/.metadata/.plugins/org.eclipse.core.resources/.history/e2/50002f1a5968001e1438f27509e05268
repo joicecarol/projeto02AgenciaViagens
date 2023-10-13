@@ -1,0 +1,34 @@
+package principal.principalDAO;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import principal.Conexao;
+import principal.Hotel;
+public class HotelDAO {
+	private Connection conexao;
+	public HotelDAO(Connection conexao) {
+        this.conexao = conexao;
+	}
+
+	public void cadastrarHotel(Hotel hotel) {
+	    String sql = "INSERT INTO hotel (idHotel, localHotel, nomeDoHotel, quantidadeDiaria, precoHotel) VALUES (?, ?, ?, ?, ?)";
+
+	    try (PreparedStatement preparedStatement = conexao.prepareStatement(sql)) {
+	        preparedStatement.setString(2, hotel.getLocal());
+	        preparedStatement.setString(3, hotel.getNomeDoHotel());
+	        preparedStatement.setInt(4, hotel.getQuantidadeDiaria());
+	        preparedStatement.setDouble(5, hotel.getPrecoHotel());
+	        preparedStatement.executeUpdate();
+	        System.out.println("Hotel cadastrado com sucesso.");
+	    } catch (SQLException e) {
+	        System.out.println("Erro ao cadastrar o hotel: " + e.getMessage());
+	    }
+	}
+
+	
+	
+	
+	
+	
+}
